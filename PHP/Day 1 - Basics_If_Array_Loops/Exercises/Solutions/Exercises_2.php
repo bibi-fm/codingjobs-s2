@@ -63,3 +63,24 @@ I need to be able to access a contact's information easily and quickly. There is
 You will have to display Ricardo's email at the end of the script.
 
 */
+
+// Initialize empty array
+$contact = array();
+
+$contact['Ricardo'] = [
+    'name' => 'ricardo',
+    'phone' => '036487487',
+    'email' => 'ricard@gmail.com'
+];
+
+$contact['Emmanuel'] = [
+    'name' => 'emmanuel',
+    'phone' => '036487487',
+    'email' => 'ricard@gmail.com'
+];
+
+echo '<pre>';
+var_dump($contact);
+echo '</pre>';
+
+echo $contact['Ricardo']['phone'];
