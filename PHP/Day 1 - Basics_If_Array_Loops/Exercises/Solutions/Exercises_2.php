@@ -8,6 +8,14 @@
 
 */
 
+$fruits = [
+    'Apple',
+    'Strawberry',
+    'Pineapple',
+    'Lemon'
+];
+
+echo $fruits[1];
 
 /* 
 - Exercise 2
@@ -16,6 +24,13 @@
 -- Display the stock of caps.
 */
 
+$stocks = [
+    'TShirts' => 20,
+    'Caps' => 10,
+    'Shoes' => 5
+];
+
+echo $stocks['Caps'];
 
 
 /*
@@ -27,6 +42,10 @@ The clothing store has just received a new stock of shoes and caps.
 -- Add 20 shoes.
 -- Display the shoe stock.
 */
+
+$stocks['Caps'] = $stocks['Caps'] + 5;
+$stocks['Caps'] += 5;
+$stocks['Shoes'] += 20;
 
 /*
 - Exercise 4
