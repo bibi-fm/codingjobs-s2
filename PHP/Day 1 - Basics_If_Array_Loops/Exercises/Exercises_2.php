@@ -16,7 +16,6 @@
 */
 
 /*
-
 - Exercise 3
 
 Based on the previous variables you created.
