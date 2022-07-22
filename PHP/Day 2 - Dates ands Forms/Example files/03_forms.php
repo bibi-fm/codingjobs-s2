@@ -35,9 +35,9 @@
         */
 
 
-    echo '<pre>';
-    var_dump($_POST);
-    echo '</pre>';
+    // echo '<pre>';
+    // var_dump($_POST);
+    // echo '</pre>';
 
     // We want to interact ONLY when we submit the form
     if (isset($_POST['submitBtn'])) {
