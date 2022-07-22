@@ -81,7 +81,7 @@ foreach ($multiTable as $key => $value) {
 // var_dump($multiTable);
 // echo '</pre>';
 
-	/*
+/*
 	-Exercise 4 :
 		Create an array of random numbers.
 		You can create it manually. For example $array = [5, 20, 6, -6, 100]
@@ -95,3 +95,18 @@ foreach ($multiTable as $key => $value) {
 		3. CHALLENGE (optional)
 		You can only use 2 variables ($array and $i doesn't count).
 	*/
+
+$array = [5, 20, 6, -6, 100];
+$posMax = 0;
+$posMin = 0;
+
+foreach ($array as $key => $value) {
+	if ($value > $array[$posMax])
+		$posMax = $key;
+
+	if ($value < $array[$posMin])
+		$posMin = $key;
+}
+
+echo 'Maximum is : ' . $array[$posMax] . ' at position ' . $posMax . '<br>';
+echo 'Minimum is : ' . $array[$posMin] . ' at position ' . $posMin . '<br>';
