@@ -1,6 +1,6 @@
 <?php
 
-	/*
+/*
 	- Exercise 1 : 
 		Michel went to the supermarket and bought some food.
 		He used an array to save his spending.
@@ -12,6 +12,26 @@
 	    3. Use a loop to calculate the total of Michel spendings.
 
 	*/
+
+$array = array("Salad" => 1.03, "Tomato" => 2.3, "Oignon" => 1.85, "Red cabbage" => 0.85);
+
+asort($array);
+foreach ($array as $key => $value) {
+	echo "$key : $value <br>";
+}
+
+krsort($array);
+echo '<pre>';
+var_dump($array);
+echo '</pre>';
+
+$total = 0;
+foreach ($array as $price) {
+	$total += $price;
+}
+
+echo "Total spendings : $total <br>";
+
 
 	/*
 	- Exercise 2 : 
