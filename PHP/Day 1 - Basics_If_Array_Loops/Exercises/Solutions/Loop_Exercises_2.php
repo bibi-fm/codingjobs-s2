@@ -13,6 +13,25 @@
 
 	*/
 
+$array = array("Salad" => 1.03, "Tomato" => 2.3, "Oignon" => 1.85, "Red cabbage" => 0.85);
+
+asort($array);
+foreach ($array as $key => $value) {
+	echo "$key : $value <br>";
+}
+
+krsort($array);
+echo '<pre>';
+var_dump($array);
+echo '</pre>';
+
+$total = 0;
+foreach ($array as $price) {
+	$total += $price;
+}
+
+echo "Total spendings : $total <br>";
+
 
 /*
 	- Exercise 2 : 
@@ -24,12 +43,43 @@
 		Once it's done, try to do it also with the while loop.
 	*/
 
+// Initialize empty array
+$array = array();
+
+for ($i = 0; $i <= 20; $i++) {
+	$array[] = $i;
+}
+
+echo '<pre>';
+var_dump($array);
+echo '</pre>';
+
+$a = 0;
+while ($a <= 20) {
+	$array[] = $a;
+	$a++;
+}
+
 /*
 	-Exercise 3 :
 		Use a loop to create an array.
 		This array will contain the multiplication table of 2.
 		From 1 to 10.
 	*/
+
+$multiTable = array();
+
+for ($i = 1; $i <= 10; $i++) {
+	$multiTable[$i] = $i * 2;
+}
+
+foreach ($multiTable as $key => $value) {
+	echo "$key : $value<br>";
+}
+
+// echo '<pre>';
+// var_dump($multiTable);
+// echo '</pre>';
 
 /*
 	-Exercise 4 :
@@ -45,3 +95,18 @@
 		3. CHALLENGE (optional)
 		You can only use 2 variables ($array and $i doesn't count).
 	*/
+
+$array = [5, 20, 6, -6, 100];
+$posMax = 0;
+$posMin = 0;
+
+foreach ($array as $key => $value) {
+	if ($value > $array[$posMax])
+		$posMax = $key;
+
+	if ($value < $array[$posMin])
+		$posMin = $key;
+}
+
+echo 'Maximum is : ' . $array[$posMax] . ' at position ' . $posMax . '<br>';
+echo 'Minimum is : ' . $array[$posMin] . ' at position ' . $posMin . '<br>';
