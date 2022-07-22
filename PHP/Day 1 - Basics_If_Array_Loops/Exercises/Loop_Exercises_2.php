@@ -33,7 +33,7 @@ foreach ($array as $price) {
 echo "Total spendings : $total <br>";
 
 
-	/*
+/*
 	- Exercise 2 : 
 
 		Using a loop, fill in a array with every number from 0 to 20.
@@ -43,12 +43,43 @@ echo "Total spendings : $total <br>";
 		Once it's done, try to do it also with the while loop.
 	*/
 
-	/*
+// Initialize empty array
+$array = array();
+
+for ($i = 0; $i <= 20; $i++) {
+	$array[] = $i;
+}
+
+echo '<pre>';
+var_dump($array);
+echo '</pre>';
+
+$a = 0;
+while ($a <= 20) {
+	$array[] = $a;
+	$a++;
+}
+
+/*
 	-Exercise 3 :
 		Use a loop to create an array.
 		This array will contain the multiplication table of 2.
 		From 1 to 10.
 	*/
+
+$multiTable = array();
+
+for ($i = 1; $i <= 10; $i++) {
+	$multiTable[$i] = $i * 2;
+}
+
+foreach ($multiTable as $key => $value) {
+	echo "$key : $value<br>";
+}
+
+// echo '<pre>';
+// var_dump($multiTable);
+// echo '</pre>';
 
 	/*
 	-Exercise 4 :
