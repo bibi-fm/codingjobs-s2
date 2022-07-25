@@ -1,6 +1,5 @@
 <?php
 
-
 /* -- Exercise : 
 	2.1 (Already done in previous exercise) :
 	Write a PHP script that gives the multiplication table of 2.
