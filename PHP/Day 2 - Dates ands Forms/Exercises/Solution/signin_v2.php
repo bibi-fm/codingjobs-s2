@@ -40,8 +40,9 @@
 
         if (strlen($_POST['password']) < 8)
             $errors['password'] = 'Password must be at least 8 character long.<br>';
-        elseif ($_POST['password'] != $_POST['confirmPassword'])
-            $errors['password'] = 'Password are not identical !<br>';
+
+        if ($_POST['password'] != $_POST['confirmPassword'])
+            $errors['cPassword'] = 'Password are not identical !<br>';
 
 
         // Display summary only if NO errors
@@ -76,19 +77,23 @@
         ?>
         <br>
 
-        <input type="text" name="email" placeholder="Your Email" value="<?= $email; ?>">
+        <input type="email" name="email" placeholder="Your Email" value="<?= $email; ?>">
         <?php
         if (isset($errors['email'])) echo $errors['email'];
         ?>
         <br>
 
-        <input type="text" name="password" placeholder="Enter a password">
+        <input type="password" name="password" placeholder="Enter a password">
         <?php
         if (isset($errors['password'])) echo $errors['password'];
         ?>
         <br>
 
-        <input type="text" name="confirmPassword" placeholder="Confirm password"><br>
+        <input type="password" name="confirmPassword" placeholder="Confirm password">
+        <?php
+        if (isset($errors['cPassword'])) echo $errors['cPassword'];
+        ?>
+        <br>
         <label for="sub">Subscribe to the newsletter </label>
         <input type="checkbox" name="subscribe" id="sub"><br>
         <input type="submit" name="signinBtn" value="Sign in">
