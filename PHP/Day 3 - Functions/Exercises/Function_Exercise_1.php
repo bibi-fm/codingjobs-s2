@@ -45,6 +45,12 @@ Example :
 
 */
 
+function htmlImages($src)
+{
+	echo "<img src='$src' height='100px' />";
+}
+
+htmlImages("https://c.tenor.com/4PhnrkMR9yEAAAAd/mr-bean-silly.gif");
 
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 3 </p>';
