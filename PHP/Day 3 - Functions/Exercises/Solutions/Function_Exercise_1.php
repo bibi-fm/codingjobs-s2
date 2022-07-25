@@ -66,11 +66,26 @@ echo '<p style="font-weight: 900"> EXERCISE 3 </p>';
 	    - Calculates the sum of Michel's expenses (already done)
 	3.2
 	Write a function that will:
-	- Take an array as input
+	- Take an array as argument
 	- Calculate the sum of the expenses of the array
 	- return the sum
 
 */
+
+function calculateExpanses($arr)
+{
+	$total = 0;
+	foreach ($arr as $price) {
+		$total += $price;
+	}
+
+	return $total;
+}
+
+$array = array("Salad" => 1.03, "Tomato" => 2.3, "Oignon" => 1.85, "Red cabbage" => 0.85);
+
+echo 'Total is : ' . calculateExpanses($array);
+
 
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 4 </p>';
@@ -93,7 +108,14 @@ Write a function that:
     - Call your function with a single number: 4
 */
 
+function multiply($x = 1, $y = 2)
+{
+	$result = $x * $y;
+	return $result;
+}
 
+echo multiply(10, 5) . '<br>';
+echo multiply(4);
 
 
 echo '<hr>';
