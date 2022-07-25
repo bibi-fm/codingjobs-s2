@@ -24,5 +24,3 @@
 
 			BONUS: Make the form values ​​reappear with each submission, in case of error.
     */
-
-
