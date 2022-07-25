@@ -3,6 +3,18 @@
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 1 </p>';
 
+function whichIsGreater($x, $y)
+{
+	if ($x > $y)
+		echo "The first number is higher : $x";
+	elseif ($x < $y)
+		echo "The second number is higher : $y";
+	else
+		echo "Both values are equal : $x / $y";
+}
+
+whichIsGreater(5, 10);
+
 
 /*
 - Exercise 1
@@ -32,6 +44,15 @@ Example :
     	> Displays <img src='skate.jpg'>
 
 */
+
+function htmlImages($src)
+{
+	echo "<img src='$src' height='100px' />";
+}
+
+htmlImages("https://c.tenor.com/4PhnrkMR9yEAAAAd/mr-bean-silly.gif");
+
+
 
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 3 </p>';
