@@ -39,7 +39,7 @@ Write a htmlImages($src) function that:
     - takes a string as argument ($src)
     - display an html <img> tag with $src source
 Example :
-    htmlImages('skate.jpg') 
+    htmlImages('skate.jpg')
     	> Displays <img src='skate.jpg'>
 
 */
@@ -139,7 +139,7 @@ echo '<p style="font-weight: 900"> EXERCISE 5 </p>';
 Write a PHP script that checks if a string is a palindrome.
 A palindrome is a chain of letters whose order of letters remains the same whether read from left to right or from right to left.
 
-Example : 
+Example :
 "kayak"
 "xanax"
 "poop"
@@ -148,15 +148,33 @@ Example :
 
 function checkPalindrome($string)
 {
-	$revString = strrev($string);
-	if ($revString === $string) {
-		return "This is a palindrome <br>";
-	} else {
-		return "This is not a palindrome <br>";
+	$firstC = 0;
+	$lastC = strlen($string) - 1;
+	$step = 0;
+
+	while ($lastC > $firstC) {
+		if ($string[$firstC] != $string[$lastC]) {
+			$step = 1;
+		}
+		$firstC++;
+		$lastC--;
 	}
+
+	if ($step == 0) {
+		echo "$string is a palindrome. <br>";
+	} else {
+		echo "$string is not palindrome. <br>";
+	}
+	// $revString = strrev($string);
+	// if ($revString === $string) {
+	// 	return "This is a palindrome <br>";
+	// } else {
+	// 	return "This is not a palindrome <br>";
+	// }
 }
 
 echo checkPalindrome("ana");
+//echo checkPalindrome("ana");
 
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 6 </p>';
@@ -164,7 +182,7 @@ echo '<p style="font-weight: 900"> EXERCISE 6 </p>';
 /*
 -- Exercice 6
 
-Write a function that checks if a number is a prime number.
+Write a function that checks if a number is a prime number. DONE
 A prime number is an integer greater than 1 that can only be divided by itself and 1.
 
 */
@@ -172,15 +190,16 @@ A prime number is an integer greater than 1 that can only be divided by itself a
 function isPrime($number)
 {
 	$testNum = 0;
-	for ($i=2; $i < $number; $i++) { 
+	for ($i=2; $i < $number; $i++) {
 		if ($number % $i === 0) {
 			$testNum++;
 		}
+		//echo "$testNum <br>";
 	}
 	if ($testNum === 0) {
-		return "This is a prime number. <br>";
+		return "$number is a prime number. <br>";
 	} else {
-		return "This is not a prime number. <br>";
+		return "$number is not a prime number. <br>";
 	}
 	// if ($number % $number === 0 && $number % 1 === 0) {
 	// 	return "This is a prime number. <br>";
@@ -190,7 +209,7 @@ function isPrime($number)
 }
 
 
-echo isPrime(13);
+echo isPrime(17);
 
 
 
@@ -202,4 +221,40 @@ echo '<p style="font-weight: 900"> EXERCISE 7 </p>';
 	Write a PHP function that return the reverse(mirror) of an array.
 	You can use only one other variable (simple, no array).
 	You can only use count() or strlen() function.
+*/
+
+$random = [8, 12, 25, 3, 7];
+
+function revArr($array){
+	$len = count($array) - 1;
+	// divided by 2 because you only need to swap up until the half of the array, after that it will start repeating itself and will only swap the values of the first and last indexes.
+	for ($i=0; $i < $len/2; $i++) { 
+		$temp = $array[$i];
+		$array[$i] = $array[$len - $i];
+		$array[$len - $i] = $temp;
+	}
+	return $array;
+}
+
+echo "<pre>";
+var_dump(revArr($random));
+echo "</pre>";
+
+/*[$array[0], $array[5]] = [$array[5], $array[0]]; // switches the values of index 0 and 5
+
+$temp = $array[0]; //8
+$array[0] = $array[5]; //7
+$array[5] = $temp; //8
+$len = count($random) - 1;*/
+
+/*function revArr ($arr) {
+	$arrLen = count($arr) - 1;
+
+	 for ($i=0; $i < $arrLen; $i++) {
+	 	if ($arr[$i] != $arr[$arrLen - $i]){
+	 		return $arr;
+	 	}
+	 }
+}
+var_dump(revArr($random)) ;
 */
