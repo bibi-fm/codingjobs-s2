@@ -134,6 +134,24 @@ Example :
 
 */
 
+function isPalindrome($str)
+{
+	$len = strlen($str) - 1;
+
+	for ($i = 0; $i <= $len / 2; $i++) {
+		// echo 'Element on the left : ' . $str[$i] . '<br>';
+		// echo 'Element on the right : ' . $str[$len - $i];
+		// echo '<hr>';
+
+		if ($str[$i] != $str[$len - $i])
+			return 'Not a palindrome !';
+	}
+
+	return 'Its a palindrome !';
+}
+
+echo isPalindrome('kayak');
+
 
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 6 </p>';
@@ -147,6 +165,17 @@ A prime number is an integer greater than 1 that can only be divided by itself a
 */
 
 
+function isPrimeNumber($myNumber)
+{
+
+	for ($i = 2; $i < $myNumber; $i++) {
+		if ($myNumber % $i == 0)
+			return 'Not a prime number';
+	}
+	return 'Its a prime number';
+}
+
+echo isPrimeNumber(13);
 
 echo '<hr>';
 echo '<p style="font-weight: 900"> EXERCISE 7 </p>';
@@ -157,3 +186,27 @@ echo '<p style="font-weight: 900"> EXERCISE 7 </p>';
 	You can use only one other variable (simple, no array).
 	You can only use count() or strlen() function.
 */
+
+
+// $temp = $array[0]; // 5
+// $array[0] = $array[5]; // 2 
+// $array[5] = $temp; // 5
+// [$array[0], $array[5]] = [$array[5], $array[0]];
+
+function reverseArray($array)
+{
+	$len = count($array) - 1;
+
+	for ($i = 0; $i <= $len / 2; $i++) {
+		$temp = $array[$i];
+		$array[$i] = $array[$len - $i];
+		$array[$len - $i] = $temp;
+	}
+
+	return $array;
+}
+
+
+$array = [5, 10, 13, 8, 7, 2];
+
+var_dump(reverseArray($array));
