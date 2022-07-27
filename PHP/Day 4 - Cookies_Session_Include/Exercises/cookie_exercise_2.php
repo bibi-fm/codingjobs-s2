@@ -1,7 +1,7 @@
 <?php
 /*
 
-    Step 1: Create a page that indicates how often it has been visited by the user.
+    Step 1: Create a page that indicates how often it has been visited by the user. DONE
     No need for forms, just the $_COOKIE array
 
     Step 2: Also post the date of first visit by the client.
