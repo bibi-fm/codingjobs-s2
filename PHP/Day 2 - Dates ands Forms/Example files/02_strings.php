@@ -20,4 +20,14 @@ $lorem = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nu
 
 echo substr($lorem, 0, 30) . '...';
 
+// Transform string into array
+$string = 'Hello my favorite student is jack';
+$myArray = explode(' ', $string);
 
+echo '<pre>';
+var_dump($myArray);
+echo '</pre>';
+
+// Transform array into string
+$newString = implode(',', $myArray);
+echo $newString;
