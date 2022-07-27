@@ -25,6 +25,6 @@
 
     - Step 3 :
         If everything is good, insert the new user in the "users.txt" file.
-        It should be inserted on a new line matching the template (mail:password);
+        It should be inserted on a new line matching the template (username|mail|password);
 
     */
