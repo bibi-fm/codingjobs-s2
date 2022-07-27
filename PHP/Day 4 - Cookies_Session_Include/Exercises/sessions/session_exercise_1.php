@@ -1,5 +1,6 @@
 <?php
 /*
+
 	Let's assume you have an online shopping website.
 
 	Step 1 :
