@@ -19,3 +19,5 @@ echo substr($myString, 0, 4) . '<br>';
 $lorem = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus nulla tempora perspiciatis fuga commodi accusantium ratione, nam voluptas illo magni doloremque, id deleniti quis quas earum voluptatum temporibus, excepturi eius.';
 
 echo substr($lorem, 0, 30) . '...';
+
+
