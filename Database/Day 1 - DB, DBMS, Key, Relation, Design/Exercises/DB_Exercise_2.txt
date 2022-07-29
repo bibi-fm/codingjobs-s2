@@ -62,12 +62,3 @@ We have to see what kind of formula they propose
 There are 2 formulas: VR and AR.
 If they have their own helmets, they can use only the app.
 Otherwise they can rent a helmet, which they have to return at the end, and they have to pay extra.
-
-
-Partners :
-    Id
-    name
-    adress
-    latitude
-    longitude
-    vr/ar
