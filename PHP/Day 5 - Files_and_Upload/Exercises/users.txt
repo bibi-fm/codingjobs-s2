@@ -1,1 +1,1 @@
-simon|simon@live.fr|0666777888|12345
+simon|simon@live.fr|12345

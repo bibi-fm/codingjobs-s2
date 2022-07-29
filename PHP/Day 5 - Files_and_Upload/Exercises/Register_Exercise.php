@@ -18,13 +18,14 @@
     - Step 2 :
         If the form is submitted, you have to check :
             * username, mail and password must not be empty !
-            * mail must be a valid one (with @ symbol)
+            * mail must be a valid one (with @symbol)
             * passwords must be the same 
         
         Display a different message for each validation/error.
 
     - Step 3 :
         If everything is good, insert the new user in the "users.txt" file.
-        It should be inserted on a new line matching the template (mail:password);
+        
+        It should be inserted on a new line matching the template (username|mail|password);
 
     */
