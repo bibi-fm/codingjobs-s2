@@ -1,0 +1,90 @@
+Part 1 : DONE
+
+- Get all the information from each books
+SELECT * FROM books
+
+- Get the title of each book
+SELECT title FROM books
+
+- Get the title and publication date of each book
+SELECT title, publication_date FROM books
+
+---------------->
+
+Part 2 : DONE
+
+- Retrieve the title of each book, sorted alphabetically
+SELECT title FROM books ORDER BY title [ASC]
+
+- List all authors in alphabetical order and without duplicate
+SELECT DISTINCT name FROM authors ORDER BY name ASC
+
+---------------->
+
+Part 3: DONE
+
+- Recover the book with id 5 
+SELECT * FROM books WHERE id = 5
+
+- Find books released between 2000 and 2010
+SELECT publication_date FROM books WHERE publication_date > '2000-01-01' AND publication_date < '2010-01-01'
+
+- Find books that did not come out between '2000' and '2010'
+SELECT publication_date FROM books NOT WHERE publication_date > '2000' AND NOT publication_date < '2010'
+
+---------------->
+
+Part 4: DONE
+
+- Recover all books starting with "Lord of the ring"
+SELECT * FROM books WHERE title LIKE 'Lord of the ring%'
+
+- Get all the books from the author "Tolkien" (you have to know the author id)
+SELECT * FROM books WHERE author_id = 4
+
+- Get all the author's books that are not "Tolkien"
+SELECT * FROM books WHERE author_id != 4 
+SELECT * FROM books WHERE NOT author_id = 4 
+
+---------------->
+
+Part 5: 
+- Recover all books from newest to oldest DONE
+SELECT * FROM books ORDER BY publication_date DESC
+(SELECT * MIN (publication_date) FROM books) -> only returns the smallest value and does not sort all of them
+
+
+- Count the number of books by each author
+SELECT author_id,COUNT(author_id) FROM books GROUP BY author_id;
+
+---------------->
+
+Part 6 DONE
+- List only the first 5 books
+SELECT * from books ORDER BY id ASC LIMIT 5
+(SELECT * FROM books WHERE id <= 5)
+
+- List the last 4 books (from newest to oldest)
+SELECT * from books ORDER BY publication_date DESC LIMIT 4
+
+---------------->
+
+Part 7: DONE
+
+- Get the sum of all the book's price (total amount of all books)
+SELECT SUM(price) FROM books
+
+- Get the sum of books price PER author_id. 
+SELECT SUM(price) FROM books GROUP BY author_id ;
+
+
+---------------->
+
+Part 8: DONE
+- Update all books with author_id = 2.
+Those books all cost now 10.
+UPDATE books SET price = 10 WHERE author_id = 2 
+
+- Update all books with author_id = 5.
+Those books all cost now 5 more euro than previous price.
+UPDATE books SET price = price + 5 WHERE author_id = 5
