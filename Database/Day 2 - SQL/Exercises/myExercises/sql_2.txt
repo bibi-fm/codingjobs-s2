@@ -25,7 +25,10 @@ SELECT id, SUM(price) FROM books GROUP BY author_id
 UNION 
 SELECT id, SUM(price) FROM novels GROUP BY author_id
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 	- Get the total price for all books AND all novels (books and novels seperated). DONE
 SELECT id, SUM(price) AS total FROM books
 UNION 
