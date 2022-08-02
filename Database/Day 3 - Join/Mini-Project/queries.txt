@@ -1,0 +1,12 @@
+Write the SQL queries corresponding to the following questions:
+
+(a) Retrieve artists under 50 years old.
+(b) Retrieve all gender from artists (without duplicate)
+(c) Retrieve songs that begin with the letter 's'.
+(d) Retrieve songs that end with the letter 's'.
+(e) Get the number of playlists, all users combined
+(f) For each song, display the name and count how many times it appears in a playlist.
+(g) Retrieve all users who have at least one music from 'Madonna' on one of their
+playlist.
+(h)Count the number of users who have at least one 'Madonna' music on one of
+their playlist

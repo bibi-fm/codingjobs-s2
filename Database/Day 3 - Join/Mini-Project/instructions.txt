@@ -13,3 +13,5 @@ A playlist is designated by a title, a creation date, a user (the one who owns
 the playlist) and all of the music in this playlist.
 
 Create the DB design !
+
+
