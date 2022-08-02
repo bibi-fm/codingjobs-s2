@@ -5,12 +5,43 @@ For this exercises, use union command (cf union.sql file or check this link : ht
 
 -- Queries :
 	- Recover all novels and all books in one query.
+	SELECT *
+	FROM series
+	UNION
+	SELECT *
+	FROM movies
 
 	- Collect all novels and all books from/since 2018
+	SELECT *
+	FROM books
+	WHERE publication_date > '2018-01-01'
+
+	UNION
+
+	SELECT *
+	FROM novels
+	WHERE publication_date > '2018-01-01'
 
 	- Collect all the novels and all the books with the author.	
+	SELECT title, author_id
+	FROM books
+
+	UNION
+
+	SELECT title, author_id
+	FROM novels
 
 	- Get the total price per author (books and novels combined).
+
+	SELECT author_id, price FROM books
+	UNION
+	SELECT author_id, price FROM novels
+
+
+
+
+
+
 
 	- Get the total price for all books AND all novels (books and novels seperated).
 
