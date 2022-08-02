@@ -1,0 +1,71 @@
+Write the SQL queries corresponding to the following questions:
+
+(a) Retrieve artists under 50 years old. DONE
+SELECT CAST( GETDATE() AS Date )
+
+
+SELECT *
+FROM artists 
+WHERE date_of_birth > '1973-01-01'
+
+BETTER SOLUTION
+SELECT *
+FROM artists 
+WHERE date_of_birth > YEAR(NOW()) - 50
+------------------->
+
+(b) Retrieve all gender from artists (without duplicate) DONE
+
+SELECT gender
+FROM artists 
+GROUP BY gender
+------------------->
+
+(c) Retrieve songs that begin with the letter 's'. DONE
+
+SELECT title
+FROM music
+WHERE title LIKE 's%'
+------------------->
+
+(d) Retrieve songs that end with the letter 's'. DONE
+
+SELECT title
+FROM music
+WHERE title LIKE '%s'
+------------------->
+
+(e) Get the number of playlists, all users combined DONE
+
+SELECT COUNT(title)
+FROM playlists
+------------------->
+
+(f) For each song, display the name and count how many times it appears in a playlist. DONE
+
+SELECT music.title, COUNT(playlist_id)
+FROM music
+INNER JOIN playlist_content ON music_id = music.id
+GROUP BY playlist_id
+------------------->
+
+(g) Retrieve all users who have at least one music from 'Madonna' on one of their
+playlist. DONE
+
+SELECT user_id
+FROM playlists
+INNER JOIN playlist_content ON playlist_id = playlists.id
+INNER JOIN music ON music_id = music.id
+WHERE artist_id = '5'
+------------------->
+
+(h)Count the number of users who have at least one 'Madonna' music on one of
+their playlist DONE
+
+SELECT COUNT(user_id)
+FROM playlists
+INNER JOIN playlist_content ON playlist_id = playlists.id
+INNER JOIN music ON music_id = music.id
+WHERE artist_id = '5'
+
+------------------->
