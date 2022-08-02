@@ -6,6 +6,6 @@
 
 */
 
-SELECT title, name, date_of_birth
+SELECT title, name
 FROM authors a
 INNER JOIN books b ON a.id = b.author_id
