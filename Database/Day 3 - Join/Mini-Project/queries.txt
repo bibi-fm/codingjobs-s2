@@ -23,23 +23,31 @@ WHERE musics.title LIKE '%s'
 SELECT COUNT(*)
 FROM playlists
 
-
 (f) For each song, display the name and count how many times it appears in a playlist.
-
 SELECT title, COUNT(m.id)
 FROM musics m
 INNER JOIN playlist_content pc ON m.id = pc.music_id
 GROUP BY m.id
 
-
-
-
-
-
-
-
-
 (g) Retrieve all users who have at least one music from 'Madonna' on one of their
 playlist.
+SELECT name
+FROM musics m
+INNER JOIN artists u ON a.id = m.artist_id
+INNER JOIN playlist_content pc ON m.id = pc.music_id
+INNER JOIN playlist p ON p.id = pc.playlist_id
+INNER JOIN users u ON u.id = p.user_id
+WHERE a.name = "Madonna"
+GROUP BY u.id
+
+
 (h)Count the number of users who have at least one 'Madonna' music on one of
 their playlist
+SELECT COUNT(*)
+FROM musics m
+INNER JOIN artists u ON a.id = m.artist_id
+INNER JOIN playlist_content pc ON m.id = pc.music_id
+INNER JOIN playlist p ON p.id = pc.playlist_id
+INNER JOIN users u ON u.id = p.user_id
+WHERE a.name = "Madonna"
+GROUP BY m.id
