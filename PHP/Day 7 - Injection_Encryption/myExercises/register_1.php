@@ -6,14 +6,15 @@ Based on the Register exercise :
 
 (b) Hash the password before before inserting the user DONE
 (c) Create the login page where you have to :
-    (c.1) Check if the email match a user in the DB
-    (c.2) If you found a match, check if password matches
-    (c.3) Display a success or error message
+    (c.1) Check if the email match a user in the DB DONE
+    (c.2) If you found a match, check if password matches DONE
+    (c.3) Display a success or error message DONE
 
 */
 
 if (isset($_POST['register-btn'])) {
     if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password']) && str_contains($_POST['email'], "@") && $_POST['password'] === $_POST['check-pass']) {
+        
         echo "Thank you for registering! You can now login on this page <a href = './login_1.php'>Login</a><br>";
 
         $username = strip_tags(trim($_POST['username']));

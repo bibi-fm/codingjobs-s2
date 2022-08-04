@@ -3,41 +3,26 @@ session_start();
 if (isset($_POST['submit-btn'])) {
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-        $conn = mysqli_connect('localhost', 'root', 'root', 'spotify_db');
+        $conn = mysqli_connect('localhost', 'root', '', 'spotify_db');
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
         if ($conn) {
-            echo 'Connected successfully<br>';
-
-            $query = 'SELECT * FROM users';
+            $query = "SELECT * FROM users WHERE email = '$email'";
 
             $results = mysqli_query($conn, $query);
 
-            $table = mysqli_fetch_all($results, MYSQLI_ASSOC);
+            $table = mysqli_fetch_all($results, MYSQLI_ASSOC); //mysqli_fetch_assoc($results) would be better if you're just expecting one result
 
-            /*echo '<pre>';
-            var_dump($table[0]['email']);
-            echo '</pre>';*/
-            
-
-            if ($table[0]['email'] === $_POST['email'] && $table[0]['password'] === $_POST['password']) {
+            if ($table[0]['email'] === $email && password_verify($password, $table[0]['password'])) {
                 echo "User successfully logged in.<br>";
                 setcookie('isLogIn', true);
+            } else if (mysqli_num_rows($results) === 0) {
+                echo "User does not exist";
             } else {
-                echo "The credentials are incorrect. / User does not exist.<br>";
+                echo "The credentials are incorrect.<br>";
             }
-
-        } else {
-            echo 'Problem connecting with the database';
         }
-
-        //header("Location: ");
-
-        /*echo '<pre>';
-        var_dump($_SESSION);
-        echo '</pre>';
-        echo '<pre>';
-        var_dump($_COOKIE);
-        echo '</pre>';*/
     } else {
         echo "Password and email are mandatory!";
     }
