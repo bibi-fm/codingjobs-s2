@@ -10,6 +10,8 @@
 
 <body>
 
+    <h2>Register</h2>
+
     <?php
 
     // Check if submit button is clicked
