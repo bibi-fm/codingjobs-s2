@@ -50,6 +50,11 @@ if ($conn) {
             <?= $book['publication_date']; ?>
         </p>
 
+
+        <img src="<?= $song['poster'] ?>" alt="">
+
+
+
         <hr>
 
     <?php endforeach; ?>
