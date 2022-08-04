@@ -44,7 +44,8 @@
             // Save data from the Form
             $username = strip_tags(trim($_POST['username']));
             $email = strip_tags(trim($_POST['email']));
-            $password = trim($_POST['password']);
+            // $password = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
             $conn = mysqli_connect('localhost', 'root', '', 'spotify_db');
 
