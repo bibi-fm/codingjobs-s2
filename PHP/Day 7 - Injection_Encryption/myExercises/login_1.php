@@ -15,8 +15,9 @@ if (isset($_POST['submit-btn'])) {
             $table = mysqli_fetch_all($results, MYSQLI_ASSOC); //mysqli_fetch_assoc($results) would be better if you're just expecting one result
 
             if ($table[0]['email'] === $email && password_verify($password, $table[0]['password'])) {
-                echo "User successfully logged in.<br>";
+                //echo "User successfully logged in.<br>";
                 setcookie('isLogIn', true);
+                header("Location: account.php");
             } else if (mysqli_num_rows($results) === 0) {
                 echo "User does not exist";
             } else {
@@ -39,6 +40,14 @@ if (isset($_POST['submit-btn'])) {
 </head>
 
 <body>
+    <?php require_once 'nav.html'; ?>
+    <style>
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+    </style>
     <form method="POST" action="">
         <label for="email">Email:</label>
         <input type="text" name="email">
@@ -47,6 +56,7 @@ if (isset($_POST['submit-btn'])) {
         <input type="text" name="password">
         <br>
         <button type="submit" name="submit-btn">Log In</button>
+
     </form>
 </body>
 
