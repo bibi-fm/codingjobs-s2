@@ -29,7 +29,7 @@ $song = mysqli_fetch_assoc($result);
 </head>
 
 <body>
-    <?php require_once 'nav.html'; ?>
+    <?php require_once 'nav.php'; ?>
     <h1><?= $song['title']; ?></h1>
 </body>
 
