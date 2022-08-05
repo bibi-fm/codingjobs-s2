@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php require_once 'nav.html'; ?>
+    <?php require_once 'nav.php'; ?>
     <h2>Register</h2>
 
     <?php

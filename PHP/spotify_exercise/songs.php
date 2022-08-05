@@ -37,7 +37,7 @@ if ($conn) {
 </head>
 
 <body>
-    <?php require_once 'nav.html'; ?>
+    <?php require_once 'nav.php'; ?>
     <?php foreach ($songs as $song) : ?>
 
         <p>

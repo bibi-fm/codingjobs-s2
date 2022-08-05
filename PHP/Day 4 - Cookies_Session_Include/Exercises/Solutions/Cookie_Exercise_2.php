@@ -2,7 +2,6 @@
     <input type="submit" name="resetBtn" value="Reset">
 </form>
 
-
 <?php
 
 // Did I clicked on reset btn

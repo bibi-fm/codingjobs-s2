@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php require_once 'nav.html'; ?>
+    <?php require_once 'nav.php'; ?>
     <h2>Login</h2>
 
     <?php
@@ -42,6 +42,7 @@
             if (password_verify($_POST['password'], $user['password'])) {
                 echo 'Log-in successfully.';
                 setcookie('email', $email);
+                header('Location: songs.php');
             } else {
                 echo 'Password is incorrect.';
             }
