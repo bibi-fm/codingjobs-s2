@@ -1,8 +1,9 @@
 <?php
-session_start();
 if (isset($_COOKIE['isLogIn'])) {
     require_once 'account-nav.html';
     echo "<h2> Welcome.<h2>";
+} else {
+    require_once 'permissions.php';
 }
 /*if (isset()) {
     setcookie('isLogIn', 0, time() - 3600);
