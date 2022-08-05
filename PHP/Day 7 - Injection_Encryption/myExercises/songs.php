@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $conn = mysqli_connect('localhost', 'root', '', 'spotify_db');
 
 if ($conn) {
