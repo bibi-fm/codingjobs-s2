@@ -95,6 +95,7 @@ if (isset($_POST['register-btn'])) {
 </head>
 
 <body>
+    <?php require_once 'nav.html'; ?>
     <form enctype="multipart/form-data" method="POST">
         <label for="username">Username:</label>
         <input type="text" name="username" placeholder="Username">
