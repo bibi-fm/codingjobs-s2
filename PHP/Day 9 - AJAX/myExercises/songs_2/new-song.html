@@ -24,11 +24,11 @@
     <script>
         document.querySelector("form").addEventListener('submit', function (event) {
             event.preventDefault();
-            let data = this;
+            let form = this;
 
             fetch('insert-song.php', {
                 method: 'post',
-                body: new FormData(data)
+                body: new FormData(form)
             }).then(res => res.text())
                 .then(function (result) {
                     // Once the AJAX call was made
