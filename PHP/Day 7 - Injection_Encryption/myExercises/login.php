@@ -12,19 +12,19 @@ if (isset($_POST['submit-btn'])) {
 
             $results = mysqli_query($conn, $query);
 
-            $table = mysqli_fetch_all($results, MYSQLI_ASSOC); //mysqli_fetch_assoc($results) would be better if you're just expecting one result
+            $user = mysqli_fetch_all($results, MYSQLI_ASSOC); //mysqli_fetch_assoc($results) would be better if you're just expecting one result
 
-            $username = $table[0]['username'];
-            $picture = $table[0]['picture'];
+            $username = $user[0]['username'];
+            $picture = $user[0]['picture'];
 
-            if ($table[0]['email'] === $email && password_verify($password, $table[0]['password'])) {
+            if ($user[0]['email'] === $email && password_verify($password, $user[0]['password'])) {
                 //echo "User successfully logged in.<br>";
                 setcookie('isLogIn', true);
                 header("Location: account.php");
                 $_SESSION['email'] = $email;
                 $_SESSION['username'] = $username;
                 if ($picture){
-                    $_SESSION['picture'] = "/uploaded_files/$picture"; 
+                    $_SESSION['picture'] = "./uploaded_files/$picture"; 
                 }
             } else if (mysqli_num_rows($results) === 0) {
                 echo "User does not exist";
