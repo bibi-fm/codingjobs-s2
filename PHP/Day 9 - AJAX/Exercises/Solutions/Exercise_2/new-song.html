@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Insert a new song</h2>
+
+    <div id="results"></div>
+
+    <form method="post">
+        <input type="text" name="title" placeholder="Title"><br>
+        <input type="date" name="release_date" placeholder="Release date"><br>
+        <input type="text" name="poster" placeholder="Poster"><br>
+        <input typDebug_Exercise_1.phpe="text" name="artist_id" placeholder="Artist ID"><br>
+
+        <select name="categ_id" id="cat">
+            <option value="1">Pop</option>
+            <option value="2">Rock</option>
+            <option value="3">Rap</option>
+            <option value="4">Funk</option>
+        </select>
+
+        <input type="submit" value="Insert" id="submitBtn">
+    </form>
+
+    <script>
+        document.querySelector("form").addEventListener('submit', function (event) {
+            // Prevent the page to refresh
+            event.preventDefault();
+            let form = this;
+
+            fetch('insert-song.php', {
+                method: 'post',
+                body: new FormData(form)
+            }).then(res => res.text())
+                .then(function (result) {
+                    // Once the AJAX call was made
+                    console.log(result);
+                    document.getElementById('results').innerHTML = result;
+                });
+        });
+    </script>
+
+</body>
+
+</html>
