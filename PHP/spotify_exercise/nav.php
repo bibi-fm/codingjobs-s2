@@ -9,6 +9,9 @@
             </li>
         <?php else : ?>
             <li>
+                <a href="account.php">Account</a>
+            </li>
+            <li>
                 <a href="logout.php">Logout</a>
             </li>
         <?php endif; ?>
