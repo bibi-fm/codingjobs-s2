@@ -1,7 +1,6 @@
 <?php
-session_start();
-var_dump($_SESSION);
 if (isset($_COOKIE['isLogIn'])) {
+    session_start();
     require_once 'account-nav.html';
     $username = $_SESSION['username'];
     echo "<h2> Welcome, $username.<h2>";
@@ -13,7 +12,13 @@ if (isset($_COOKIE['isLogIn'])) {
 
             $results = mysqli_query($conn, $query);
 
+            setcookie('isLogIn', 0, time() - 3600);
+
+            //session_destroy();
+
             header("Location: register.php");
+        } else {
+            echo "Something went wrong. Please contact the administration.";
         }
     }
 } else {
@@ -32,7 +37,7 @@ if (isset($_COOKIE['isLogIn'])) {
 
     Let's continue the Spotify Exercise.
     (a) Create an 'account.php' page DONE
-    (b) In this page, display all the informations about the user : username / email and picture TO FIX
+    (b) In this page, display all the informations about the user : username / email and picture DONE
     (c) Create a 'Delete' button/link. When you click, it should :
         (c.1) Delete the user from the DB DONE
         (c.2) Redirect to register page DONE
@@ -58,12 +63,16 @@ if (isset($_COOKIE['isLogIn'])) {
 </head>
 
 <body>
-    <p><?= $_SESSION['username']; ?></p>
-    <p><?= $_SESSION['email']; ?></p>
-    <img src="<?php $_SESSION['picture']; ?>">
-    <form method="POST">
-        <button type="submit" name="delete-btn">Delete</button>
-    </form>
+    <?php if (isset($_COOKIE['isLogIn'])) : ?>
+        <p><?= $username; ?></p>
+        <p><?= $_SESSION['email']; ?></p>
+        <img src="<?= $_SESSION['picture']; ?>">
+        <!--<?php var_dump($_SESSION['picture']);?>-->
+        <!--<img src="./uploaded_files/avatar_1.png">-->
+        <form method="POST">
+            <button type="submit" name="delete-btn">Delete</button>
+        </form>
+    <?php endif; ?>
 </body>
 
 </html>
