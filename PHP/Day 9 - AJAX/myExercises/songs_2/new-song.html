@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Song</title>
+    <style>
+      input {
+        width: 170px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="new-song"></div>
+    <form method="post">
+      <input type="text" name="title" id="" placeholder="Title" /><br />
+      <input type="date" name="release-date" id="" /><br />
+      <input type="text" name="poster" id="" placeholder="Poster" /><br />
+      <input type="number" name="artist" id="" placeholder="Artist (1-3)" min="0" max="3"/><br />
+      <input type="number" name="category" id="" placeholder="Category (1-4)" min="0" max="4"/><br />
+      <button type="submit">Add Song</button>
+    </form>
+    <script>
+        document.querySelector("form").addEventListener('submit', function (event) {
+            event.preventDefault();
+            let data = this;
+
+            fetch('insert-song.php', {
+                method: 'post',
+                body: new FormData(data)
+            }).then(res => res.text())
+                .then(function (result) {
+                    // Once the AJAX call was made
+                    console.log(result);
+                    document.getElementById('new-song').innerHTML = result;
+                });
+        });
+    </script>
+  </body>
+</html>
