@@ -11,18 +11,18 @@
 <body>
     <h2>Songs List</h2>
 
-    <label for="sort"></label>
+    <label for="sort">Order by :</label>
     <select name="filter" id="sort">
         <option value="asc">Title ASC</option>
         <option value="desc">Title DESC</option>
     </select>
 
-    <div class="songs"></div>
+    <div id="songs"></div>
 
     <script>
 
 
-        fetch('get-song.php', {
+        fetch('get-songs.php', {
             method: 'post',
         }).then(res => res.text())
             .then(function (result) {
@@ -32,12 +32,12 @@
             });
 
 
-        document.getElementById('filter').addEventListener('change', function (e) {
+        document.getElementById('sort').addEventListener('change', function (e) {
 
             var formData = new FormData();
             formData.append('orderby', this.value);
 
-            fetch('get-song.php', {
+            fetch('get-songs.php', {
                 method: 'post',
                 body: formData,
             }).then(res => res.text())
