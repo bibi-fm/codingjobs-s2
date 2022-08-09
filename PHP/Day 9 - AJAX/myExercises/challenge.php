@@ -1,5 +1,20 @@
 <?php
-
+$array = [5, 2, 3, 6, 7, 15];
+function Fizzbuzz($n)
+{
+	if ($n % 3 === 0 && $n % 5 === 0) {
+		echo 'TicTac';
+	} else if ($n % 5 === 0) {
+		echo 'Buzz';
+	} elseif ($n % 3 === 0) {
+		echo 'Fizz';
+	} else {
+		echo $n;
+	}
+}
+foreach ($array as $value) {
+	echo Fizzbuzz($value) . '<br>';
+}
 /*
 
 We have an array of integers, positive, between 1 and $nbElements (nbElements is the number of elements. You can use this variable).
@@ -15,20 +30,3 @@ Examples :
 		. if the number is divisible by 3 AND by 5 : display 'TicTac'
 		. else : display the number 'n'
 */
-
-$array = [5, 2, 3, 6, 7, 15];
-FizzBuzz($array);
-
-function FizzBuzz($array)
-{
-	foreach ($array as $number) {
-		if ($number % 5 == 0 && $number % 3 == 0)
-			echo 'TicTac<br>';
-		elseif ($number % 3 == 0)
-			echo 'Fizz<br>';
-		else if ($number % 5 == 0)
-			echo 'Buzz<br>';
-		else
-			echo $number . '<br>';
-	}
-}
