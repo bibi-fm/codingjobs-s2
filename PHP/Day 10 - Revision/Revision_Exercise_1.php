@@ -7,6 +7,12 @@
 
 echo '<h3>Exercise 1</h3>';
 
+$x = 5;
+$y = "1";
+$z = true;
+$n = 2.5;
+$z = $x + $y;
+$k = $n * $y;
 
 /*
 	Show the date (in a nice format) for :
