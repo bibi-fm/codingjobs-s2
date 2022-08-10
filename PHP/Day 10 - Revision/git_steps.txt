@@ -1,0 +1,20 @@
+1. Create a repository on Github.com
+Make it private
+
+2. Create a new folder in htdocs
+The name of the folder should be the name of the repo (not mandatory)
+
+3. Open the folder with the terminal (or vscode)
+
+4. Copy/Paste the instructions/command line from GitHub page in the terminal
+
+5. Everything is sync.
+Now, when you want to push online, follow the next steps.
+
+
+
+---- Push online -----
+Run those command line in the terminal : 
+    1. git add.
+    2. git commit -am "message"
+    3. git push
