@@ -19,6 +19,6 @@ $celebrites = array(
     "PHP Simon" => array(
         "houses" => 0,
         "credit" => 200,
-        "debit" => -1800
+        "debit" => 1800
     )
 );
