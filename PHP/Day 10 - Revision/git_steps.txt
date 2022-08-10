@@ -15,6 +15,6 @@ Now, when you want to push online, follow the next steps.
 
 ---- Push online -----
 Run those command line in the terminal : 
-    1. git add.
+    1. git add .
     2. git commit -am "message"
     3. git push
