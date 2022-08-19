@@ -1,5 +1,4 @@
 <?php
-var_dump($_POST);
 $search = $_POST['search'];
 
 $conn = mysqli_connect('localhost', 'root', '', 'spotify_db');
