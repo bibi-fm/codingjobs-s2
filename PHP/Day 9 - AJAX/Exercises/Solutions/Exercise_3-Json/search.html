@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form method="post">
+        <input type="text" name="search" placeholder="Start typing a title"><br>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        document.querySelector("input[name=search]").addEventListener('keyup', function (event) {
+            // event.preventDefault();
+            let form = document.querySelector("form");
+
+            fetch('search-song.php', {
+                method: 'post',
+                body: new FormData(form),
+                type: 'jSON'
+            }).then(res => res.json())
+                .then(function (result) {
+                    // Once the AJAX call was made
+                    let output = '';
+
+                    result.forEach(song => {
+                        console.log("Title : " + song.title);
+                        output += "Title : " + song.title + "<br>";
+                    });
+
+                    document.getElementById('results').innerHTML = output;
+
+                });
+        });
+    </script>
+
+</body>
+
+</html>
