@@ -12,5 +12,5 @@
 		Each time the user press a key, results are shown/updated on the page.
 
     To achieve this you should create a php file ('search-songs.php'). 
-		This PHP file looks for a song matching specific characters and return an array of movies.
+		This PHP file looks for a song matching specific characters and display the songs matching.
 */
