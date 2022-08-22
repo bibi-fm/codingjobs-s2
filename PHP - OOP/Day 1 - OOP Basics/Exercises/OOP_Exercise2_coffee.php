@@ -20,9 +20,8 @@
 	$myCoffee->setTemperature(65);
 */
 
-
 /*
-	Part 2 :
+	Part 2 : 15min
 
 	Create these methods :
 		- sip : Accept one integer as parameter which match the quantity we want to drink (in cl).
@@ -39,7 +38,7 @@
 */
 
 /*
-	Part 3 :
+	Part 3 : 5 min
 
 	Now we save the max. volume of the mug (cl) in the object.
 	You need to add another properties $volume
@@ -53,12 +52,12 @@
 
 
 /*
-	Part 4 : 
+	Part 4 : 10min
 	Change the method 'refill' to make the fill automatic
 */
 
 /* 
-	Part 5 :
+	Part 5 : 20min
 	- Delete the setQuantity() method.
 		We can no longer edit the quantity of the coffee.
 		We can only fill ou sip the cup.
@@ -74,7 +73,7 @@
 
 /* 
 
-	Step 6 :
+	Step 6 : 10min
 	
 	Edit the sip() method to make sure it's enough coffee left in the cup.
 	If there is not enough coffee, define the quantity to 0
