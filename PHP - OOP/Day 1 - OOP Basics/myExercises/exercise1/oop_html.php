@@ -5,28 +5,19 @@
 
   Design an HtmlString class.
 
-  It is intended to display bold and / or italic text.
-
-  This class have only one property : $string
+  This class has only one property : $string
 
   It will have the following methods:
 
-  - setString ($string)
-  Sets the string
+  - setString ($string) DONE
 
-  - getString ()
-  Get the string
+  - getString () DONE
 
-  - getBoldString()
-  Get a bold version of the string
+  - getBoldString() DONE
 
-  - getItalicString ()
-  Get an italic version of the string
+  - getItalicString () DONE
 
-  - getItalicBoldString ()
-  Get a bold italic version of the string
-
-  Be careful, put the class declaration in a separate file!
+  - getItalicBoldString () DONE
 
   Use Example :
  */
@@ -43,9 +34,5 @@
   Part 2 :
 
   Make it possible to directly create a HtmlString object
-  with string in parentheses :
-
- 
-
-$markup = new HtmlString('My strinnnnng');
-echo $markup->getBoldString();*/
+  with string in parentheses DONE
+*/
