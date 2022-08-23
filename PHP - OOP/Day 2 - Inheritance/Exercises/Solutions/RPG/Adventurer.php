@@ -1,6 +1,6 @@
 <?php
 
-class Adventurer
+abstract class Adventurer
 {
     public $name;
     public $healthPoints;
@@ -18,6 +18,10 @@ class Adventurer
         $this->defPoints = 5;
         $this->powerUsed = false;
     }
+
+    // Abstract methods
+    abstract public function attack($opponent);
+    abstract public function usePower();
 
     // Handle equipment 
     // Dependency injection
