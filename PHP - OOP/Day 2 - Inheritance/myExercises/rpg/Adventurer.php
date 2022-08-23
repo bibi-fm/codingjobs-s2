@@ -1,5 +1,5 @@
 <?php
-class Character
+class Adventurer
 {
     public $name;
     public $health;
@@ -19,7 +19,7 @@ class Character
 
     public function add_equipment($equipment)
     {
-        $this->equipment = $equipment;
+         $this->equipment = $equipment;
     }
     public function remove_equipment($equipment)
     {
@@ -29,4 +29,9 @@ class Character
     {
         $this->equipment = $equipment;
     }
+    function attack($opponent)
+    {
+        return $opponent->health = $opponent->health - $this->attack;
+    }
+
 }
