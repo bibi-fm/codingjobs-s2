@@ -27,9 +27,20 @@ class Character
             echo 'Type must be Orc/Elf/Human<br>';
     }
 
-    // Handle equipment
+    // Handle equipment 
+    // Dependency injection
     public function add_equipment($equipment)
     {
         $this->equipment = $equipment;
+    }
+
+    public function remove_equipment()
+    {
+        $this->equipment = null;
+    }
+
+    public function display_equipment()
+    {
+        echo $this->equipment;
     }
 }

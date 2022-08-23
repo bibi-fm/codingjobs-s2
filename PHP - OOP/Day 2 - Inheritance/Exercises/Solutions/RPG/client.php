@@ -9,6 +9,10 @@ $sword = new equipment("Death Sword", "Sword", 10, 0, 0);
 // var_dump($sword);
 
 $legolas->add_equipment($sword);
+
+
+$legolas->display_equipment();
+
 echo '<pre>';
 var_dump($legolas);
 echo '</pre>';

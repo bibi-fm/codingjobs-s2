@@ -16,4 +16,14 @@ class Equipment
         $this->bonusAtk = $bA;
         $this->bonusDef = $bD;
     }
+
+    public function __toString()
+    {
+        return "-- Equipment information --<br>
+        Name : $this->name<br>
+        Type : $this->type<br>
+        Bonus Health : $this->bonusHealth<br>
+        Bonus Attak : $this->bonusAtk<br>
+        Bonus Defense : $this->bonusDef<br>";
+    }
 }
