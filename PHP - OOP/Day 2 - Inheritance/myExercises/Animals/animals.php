@@ -1,6 +1,8 @@
 <?php
 
 require_once 'Animal.php';
+require_once 'Cat.php';
+require_once 'Dog.php';
 
 
 $cat = new Cat(4, 'ginger', 'male', 'tart');

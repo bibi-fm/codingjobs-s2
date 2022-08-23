@@ -32,18 +32,4 @@ class Animal
     }
 }
 
-class Dog extends Animal
-{
-    public function bark()
-    {
-        echo 'Woof';
-    }
-}
 
-class Cat extends Animal
-{
-    public function meow()
-    {
-        echo 'Meow';
-    }
-}

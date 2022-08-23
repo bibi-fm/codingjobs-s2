@@ -8,7 +8,7 @@ A cat is able to meow.
 
 	-> Create the matching classes
 
-- Part 2 :
+- Part 2 : TO FIX
 
 A human being is a magical creature that does not belong to the animal kingdom but is represented by a name, a hair color and a gender.
 
@@ -16,11 +16,11 @@ A robot is a mechanical creature that is defined by an identifier and a color.
 
 	-> Create the matching classes
 
-- Part 3 :
+- Part 3 : DONE
 
 Human and robot can work, create a 'work()' method (just display some stuff).
 
-- Part 4 : 
+- Part 4 : TODO
 
 Human can talk.
 
