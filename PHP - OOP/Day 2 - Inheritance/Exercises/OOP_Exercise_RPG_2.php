@@ -32,12 +32,11 @@
 
 	For the Elves :
 		- They attack with dexterity. +2 bonus attack points for each sword an elf carry.
-		- Elves use power to take +3 of speed.
+		- Elves use power to take +3 of defense.
 
 
 	Create a class for each race : Orc / Elf / Human.
 	Of course, they will inherite from Adventurer class.
-
 
 	For the 'relous' : you can change the game is designed.
 */
