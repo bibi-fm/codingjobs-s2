@@ -1,12 +1,12 @@
 <?php
-abstract class Adventurer
+abstract class Adventurers
 {
     public $name;
     public $health;
     public $attack;
     public $defense;
     private $type;
-    private $equipment;
+    public $equipment;
 
     public function __construct($name, $type)
     {
@@ -17,8 +17,8 @@ abstract class Adventurer
         $this->defense = 5;
     }
 
-    abstract public function attack($opponent){};
-    abstract public function use_power(){};
+    abstract public function attack($opponent);
+    abstract public function use_power();
 
     public function add_equipment($equipment)
     {
