@@ -11,7 +11,7 @@
 		> Defense points (default 5)
 		> There are several types of characters: Humans, Orcs and Elves.
 
-	-- Step 1 - 20 Minutes :
+	-- Step 1 - 20 Minutes : DONE
 
 	Create a Character class.
 	This class will implement all attributes and methods common to the characters.
@@ -21,7 +21,7 @@
         $legolas = new Character('Legolas', 'Elf');
         $orky = new Character('Orky', 'Orc');
 
-	-- Step 2 - 20min :
+	-- Step 2 - 20min : DONE
 
 	There are several types of equipment: armor, sword, others (you can add as many as you want).
 	Each equipment is designated by a name, bonus attack, bonus defense and bonus health.
@@ -37,7 +37,7 @@
 	$jewel = new equipment("Grace Necklace", "Jewelry", 0, 0, 5); // 0 atk bonus, 0 def bonus, 5 life bonus;
 	$bestshield = new equipment("BDG", "Shield", 0, 10, 0); // 0 atk bonus, 10 def bonus, 0 life bonus;
 
-	-- Step 4 - 30 min :
+	-- Step 4 - 30 min : DONE
 	
 	A character can now hold an equipment.
 	You have to change the Character class and add a new property : $equipment;
