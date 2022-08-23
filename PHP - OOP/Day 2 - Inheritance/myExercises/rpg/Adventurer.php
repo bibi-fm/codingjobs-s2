@@ -1,5 +1,5 @@
 <?php
-class Adventurer
+abstract class Adventurer
 {
     public $name;
     public $health;
@@ -17,9 +17,12 @@ class Adventurer
         $this->defense = 5;
     }
 
+    abstract public function attack($opponent){};
+    abstract public function use_power(){};
+
     public function add_equipment($equipment)
     {
-         $this->equipment = $equipment;
+        $this->equipment = $equipment;
     }
     public function remove_equipment($equipment)
     {
@@ -28,10 +31,6 @@ class Adventurer
     public function display_equipment($equipment)
     {
         $this->equipment = $equipment;
-    }
-    function attack($opponent)
-    {
-        return $opponent->health = $opponent->health - $this->attack;
     }
 
 }
