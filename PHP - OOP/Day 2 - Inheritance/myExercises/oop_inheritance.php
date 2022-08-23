@@ -8,7 +8,7 @@ A cat is able to meow.
 
 	-> Create the matching classes
 
-- Part 2 : TO FIX
+- Part 2 : DONE
 
 A human being is a magical creature that does not belong to the animal kingdom but is represented by a name, a hair color and a gender.
 
