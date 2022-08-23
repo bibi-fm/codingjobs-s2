@@ -1,5 +1,5 @@
 <?php
-class Orc extends Adventurer
+class Orc extends Adventurers
 {
     //+20 defense points but -10 attack
     //If they attack an elf, which has no shield, Elf loose 50 life points
