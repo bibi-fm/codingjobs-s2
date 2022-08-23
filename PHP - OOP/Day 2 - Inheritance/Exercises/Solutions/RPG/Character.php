@@ -8,6 +8,7 @@ class Character
     public $defPoints;
     // Private because we need to check if Orc/Human/Elf
     private $type;
+    private $equipment;
 
     public function __construct($n, $t)
     {
@@ -24,5 +25,11 @@ class Character
             $this->type = $type;
         else
             echo 'Type must be Orc/Elf/Human<br>';
+    }
+
+    // Handle equipment
+    public function add_equipment($equipment)
+    {
+        $this->equipment = $equipment;
     }
 }
