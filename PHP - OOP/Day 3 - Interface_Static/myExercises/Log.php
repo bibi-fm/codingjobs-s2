@@ -10,8 +10,9 @@ class Log
 
     public static function log_info()
     {
-        self::$visit = date('d/m/Y H:i:s') . ' - Accessing file';
+        self::$visit = date('d/m/Y H:i:s') . " - Accessing file\r\n";
         if (file_exists('visit_log.txt')) {
+            //a appends information as opposed to w which overwrites
             $file = fopen("visit_log.txt", "a");
             //write info into file
             fwrite($file, self::$visit);
