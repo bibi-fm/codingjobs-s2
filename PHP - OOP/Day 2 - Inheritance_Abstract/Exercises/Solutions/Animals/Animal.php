@@ -1,6 +1,6 @@
 <?php
 
-class Animal extends LivingBeing
+abstract class Animal extends LivingBeing
 {
     // Because I will use inheritance, properties has to be public or protected
     public $nbLegs;

@@ -3,7 +3,7 @@
 class Dog extends Animal
 {
 
-    public function bark()
+    public function make_noise()
     {
         echo 'Wooof wooof<br>';
     }
