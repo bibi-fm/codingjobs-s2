@@ -7,7 +7,7 @@
 		Think about the nature of your classes. 
 		Some of them share the same role and has to implement interface.
 
-		Create this interface and the fix the matching classes.
+		Create this interface and fix the matching classes.
 
 	- Step 2 :
 
