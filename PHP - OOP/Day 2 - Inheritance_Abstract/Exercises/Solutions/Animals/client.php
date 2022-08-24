@@ -7,15 +7,17 @@ require_once 'Dog.php';
 require_once 'Human.php';
 require_once 'Robot.php';
 
+// $jackbot = new Robot('j150', 'Silver');
+// $jackbot->work();
+
 $garfield = new Cat('Garfield', 'Orange', 'Male', 4);
-$garfield->meow();
-
 $snoopy = new Dog('Snoopy', 'Grey', 'Male', 3);
-$snoopy->bark();
-
-$jackbot = new Robot('j150', 'Silver');
-$jackbot->work();
-
 $simon = new Human('Simon', 'brown', 'Male');
-$simon->work();
-$simon->talk();
+
+// Create an array of 3 objects
+$livingBeing = array($garfield, $snoopy, $simon);
+
+// Loop through the array / $value is an object
+foreach ($livingBeing as $key => $value) {
+    $value->make_noise();
+}

@@ -3,7 +3,7 @@
 class Cat extends Animal
 {
 
-    public function meow()
+    public function make_noise()
     {
         echo 'Meooowww<br>';
     }

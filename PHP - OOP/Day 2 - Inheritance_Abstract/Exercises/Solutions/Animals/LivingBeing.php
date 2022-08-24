@@ -1,6 +1,6 @@
 <?php
 
-class LivingBeing
+abstract class LivingBeing
 {
     public $name;
     public $color;
@@ -12,4 +12,6 @@ class LivingBeing
         $this->color = $c;
         $this->gender = $g;
     }
+
+    abstract public function make_noise();
 }
