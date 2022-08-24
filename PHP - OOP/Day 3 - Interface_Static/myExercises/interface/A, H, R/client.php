@@ -15,12 +15,12 @@ $robot = new Robot(25634, 'grey');
 $robot1 = new Robot(54742, 'orange');
 
 
-$livingBeing = [$human, $robot, $human1, $robot1];
+$workers = [$human, $robot, $human1, $robot1];
 
-foreach ($livingBeing as $key => $obj) {
+foreach ($workers as $key => $worker) {
     // The KEY will print int(0) and not the object itself
     /*echo '<pre>';
     var_dump($value);
     echo '</pre>';*/
-    $obj->work();
+    $worker->work();
 }
