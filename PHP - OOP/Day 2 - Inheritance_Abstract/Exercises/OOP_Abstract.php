@@ -16,7 +16,7 @@
 
 		1. Create an array of animals and humans (cats, dogs or humans)
 		2. Create a script where :
-			- You loop ten times
+	
 			- Loop through the array
 			- Each time the current element should make a sound
 
