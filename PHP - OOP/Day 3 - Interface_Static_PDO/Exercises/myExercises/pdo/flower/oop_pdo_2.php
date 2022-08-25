@@ -32,14 +32,14 @@ Step 2 :
 Step 3 :
 
 	- Edit the FlowerManager class.
-	Add a new public method find($id).
-	This function retrieve one specific flower (thanks to the id in the argument) and returns it.
+	Add a new public method find($id). DONE
+	This function retrieve one specific flower (thanks to the id in the argument) and returns it. DONE
 
-	- On the view-flowers page, add a link 'see more' next to each flowers.
-	This link redirect to 'flower-detail' page.
+	- On the view-flowers page, add a link 'see more' next to each flowers. DONE
+	This link redirect to 'flower-detail' page. DONE
 
-	- Create page 'flower-detail.php'
-	Use get method (same as movie) to grab the id of the flower.
+	- Create page 'flower-detail.php' DONE
+	Use get method (same as movie) to grab the id of the flower. DONE
 
 	- Display the flower in this page using FlowerManager->find($id)
 	

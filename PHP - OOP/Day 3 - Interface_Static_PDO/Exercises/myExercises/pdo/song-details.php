@@ -7,7 +7,7 @@ $id = $_GET['id'];
 
 $pdo = new PDO('mysql:host=localhost;dbname=spotify_db', 'root', '');
 
-$query = "SELECT * FROM `songs` INNER JOIN artists ON artist_id = artists.id WHERE songs.id = :id";
+$query = "SELECT * FROM songs INNER JOIN artists ON artist_id = artists.id WHERE songs.id = :id";
 //$results = $pdo->query('SELECT * FROM songs WHERE id = $id');
 
 $prep = $pdo->prepare($query);
