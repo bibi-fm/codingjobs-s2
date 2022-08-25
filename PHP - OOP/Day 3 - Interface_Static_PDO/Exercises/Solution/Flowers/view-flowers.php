@@ -17,8 +17,8 @@
     $arrayFlowers = $flowerManager->findAll();
 
     foreach ($arrayFlowers as $flower) {
-        echo 'Name : ' . $flower['name'] . '<br>';
-        echo 'Price : ' . $flower['price'] . '<hr>';
+        echo 'Name : ' . $flower->get_name() . '<br>';
+        echo 'Price : ' . $flower->get_price() . '<hr>';
     }
     ?>
 

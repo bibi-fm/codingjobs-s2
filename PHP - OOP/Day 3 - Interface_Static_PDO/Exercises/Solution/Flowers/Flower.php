@@ -2,9 +2,9 @@
 
 class Flower
 {
-    public $id;
-    public $name;
-    public $price;
+    private $id;
+    private $name;
+    private $price;
 
     // Setters
     public function set_id($newId)

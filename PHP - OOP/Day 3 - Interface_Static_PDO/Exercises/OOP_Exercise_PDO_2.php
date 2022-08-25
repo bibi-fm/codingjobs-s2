@@ -21,7 +21,7 @@ Step 2 :
 
 	- Create the class Flower.
 	This class will represent a flower (name, price).
-
+abndna 
 	- Create getter and setter
 
 	- Edit FlowerManager::findAll() method.
