@@ -1,4 +1,8 @@
 <?php
+
+if (!isset($_GET['id']) || !is_numeric($_GET['id']))
+    die('Something wrong. Missing id');
+    
 $id = $_GET['id'];
 
 $pdo = new PDO('mysql:host=localhost;dbname=spotify_db', 'root', '');
