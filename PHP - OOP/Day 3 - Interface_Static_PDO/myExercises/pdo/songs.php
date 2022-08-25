@@ -5,6 +5,8 @@ $results = $pdo->query('SELECT * FROM songs');
 
 $songs = $results->fetchAll(PDO::FETCH_ASSOC);
 
+$pdo = null;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -15,7 +15,7 @@ $prep->bindValue(':id', $id);
 
 $prep->execute();
 $songs = $prep->fetchAll(PDO::FETCH_ASSOC);
-
+$pdo = null;
 //var_dump($songs);
 ?>
 
