@@ -19,7 +19,7 @@ $findFlowers = $flowers->find_all();
 <body>
     <?php foreach ($findFlowers as $flower) : ?>
         <p>
-            <strong>Name:</strong><?= $flower->get_flower() ?>
+            <strong>Name: </strong><?= $flower->get_flower() ?>
         </p>
 
         <a href="flower-details.php?id=<?= $flower->id; ?>">See More</a>
