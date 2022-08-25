@@ -4,7 +4,8 @@ class FlowerManager
 {
     private $pdo;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->pdo = new PDO('mysql:host=localhost;dbname=flower_db', 'root', '');
     }
     public function find_all()
@@ -27,5 +28,11 @@ class FlowerManager
         $flower = $prep->fetch();
         $this->pdo = null;
         return $flower;
+    }
+    public function insert_flower($name, $price)
+    {
+        if(isset($_POST)){
+            
+        }
     }
 }

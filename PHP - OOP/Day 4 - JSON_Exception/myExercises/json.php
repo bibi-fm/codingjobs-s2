@@ -25,8 +25,8 @@ Inputs are : name, price and a submit button. DONE
 
 - Step 2 : 
 
-Edit FlowerManager.
-Add a new method 'insert_flower($name, $price)'
+Edit FlowerManager. DONE
+Add a new method 'insert_flower($name, $price)' DONE
 
 - Step 3 : 
 
