@@ -11,7 +11,7 @@
 
 
 	Write the SQL queries to : 
-		1. Retrieve all playlists with user's full name on each playlist.
-		2. Get all the songs for the artist id=2
+		1. Retrieve all playlists with user's full name on each playlist. DONE
+		2. Get all the songs for the artist id=2 DONE
 		3. Get number of songs per categories.
 	*/
