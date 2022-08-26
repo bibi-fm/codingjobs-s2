@@ -2,6 +2,8 @@
 require_once 'FlowerManager.php';
 require_once 'Flower.php';
 
+use Flowers\Utilities\FlowerManager;
+
 $flowers = new FlowerManager;
 $findFlowers = $flowers->find_all();
 

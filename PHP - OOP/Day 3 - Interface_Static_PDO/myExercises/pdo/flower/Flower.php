@@ -1,5 +1,7 @@
 <?php
 
+namespace Flowers;
+
 class Flower
 {
     public $name;
