@@ -41,7 +41,12 @@ Step 3 :
 	- Create page 'flower-detail.php' DONE
 	Use get method (same as movie) to grab the id of the flower. DONE
 
-	- Display the flower in this page using FlowerManager->find($id)
+	- Display the flower in this page using FlowerManager->find($id) DONE
 	
+	/** NAMESPACES 
+		*  Edit flower exercise.
+		*  FlowerManager class should be under Flowers\Utilities namespace. DONE
+		*  Flower class should be under Flowers\ namespace DONE
+ */
 
  ?>
