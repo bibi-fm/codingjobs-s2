@@ -2,6 +2,8 @@
 require_once 'FlowerManager.php';
 require_once 'Flower.php';
 
+use Flowers\Utilities\FlowerManager;
+
 if (!isset($_GET['id']) || !is_numeric($_GET['id']))
     die('The page you are looking for does not exist. Check the url for typos.');
 

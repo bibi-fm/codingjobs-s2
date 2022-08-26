@@ -2,34 +2,42 @@
 
 namespace Flowers\Utilities;
 
+require_once 'Flower.php';
+require_once 'database.php';
+
 use \PDO;
 
 class FlowerManager
 {
     private $pdo;
 
-    public function __construct() {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=flower_db', 'root', '');
+    public function __construct()
+    {
+        $dsn = "mysql:host=" . SERVER . ";dbname=" . DB_NAME . ";";
+        $this->pdo = new PDO($dsn, USERNAME, PASSWORD);
     }
-    public function find_all()
+
+    public function findAll()
     {
         $results = $this->pdo->query('SELECT * FROM flowers');
         $flowers = $results->fetchAll(PDO::FETCH_CLASS, 'Flowers\Flower');
-        $this->pdo = null;
+        $pdo = null;
+
         return $flowers;
     }
 
     public function find($id)
     {
-        $this->id = $id;
-        $query = "SELECT * FROM flowers WHERE id = :id";
-        $prep = $this->pdo->prepare($query);
+        $prep = $this->pdo->prepare('SELECT * 
+        FROM flowers
+        WHERE id = :id');
         $prep->bindValue(':id', $id);
         $prep->execute();
 
         $prep->setFetchMode(PDO::FETCH_CLASS, 'Flowers\Flower');
         $flower = $prep->fetch();
-        $this->pdo = null;
+        $pdo = null;
+
         return $flower;
     }
 }
