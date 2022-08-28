@@ -10,30 +10,35 @@
 
 <body>
     <p>How many characters in your name ?</p>
-    <form action="" method="GET">
+    <form method="post">
         <input type="text" name="first_name" placeholder="First name"><br>
         <input type="text" name="last_name" placeholder="Last name"><br>
-        <input type="button" value="Submit">
+        <button type="submit" name="submit-btn">Calculate</button>
     </form>
 
     <?php
 
-    if (isset($_POST['first_name']) && isset($_POST['last_name'])) {
+    if (isset($_POST['submit-btn'])) {
+
+        $errors = [];
 
         if (empty($_POST['first_name'])) {
-            $errors['first_nme'] = 'First name is mandatory';
+            $errors['first_name'] = 'First name is mandatory';
         }
 
         if (empty($_POST['last_name'])) {
             $errors['last_name'] = 'Last name is mandatory';
         }
 
+        foreach ($errors as $error) {
+            echo $error . '<br>';
+        }
 
-        if (!empty($errors)) {
+        if (empty($errors)) {
             $firstName = $_POST['first_name'];
-            $lastname = $_POST['last_name'];
+            $lastName = $_POST['last_name'];
 
-            $nbCharacters = strlen($firstName) - strlen($lastName);
+            $nbCharacters = strlen($firstName) + strlen($lastName);
 
             echo "Your full name has $nbCharacters characters";
         } else {
