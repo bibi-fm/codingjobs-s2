@@ -68,7 +68,6 @@ class Cat
             $this->sex,
             $this->breed
         );
-
         return $properties;
     }
 }
