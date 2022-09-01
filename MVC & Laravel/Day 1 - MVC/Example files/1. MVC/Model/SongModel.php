@@ -1,26 +1,34 @@
 <?php
 
-function find_all()
+class SongModel
 {
-    $pdo = new PDO('mysql:host=localhost;dbname=spotify_db', 'root', '');
+    private function get_pdo()
+    {
+        return new PDO('mysql:host=localhost;dbname=spotify_db', 'root', '');
+    }
 
-    $results = $pdo->query('SELECT * FROM songs');
-    $songs = $results->fetchAll(PDO::FETCH_ASSOC);
-    $pdo = null;
+    public function find_all()
+    {
+        $pdo = $this->get_pdo();
 
-    return $songs;
-}
+        $results = $pdo->query('SELECT * FROM songs');
+        $songs = $results->fetchAll(PDO::FETCH_ASSOC);
+        $pdo = null;
 
-function find($id)
-{
-    $pdo = new PDO('mysql:host=localhost;dbname=spotify_db', 'root', '');
+        return $songs;
+    }
 
-    $prep = $pdo->prepare('SELECT * FROM songs WHERE id = ?');
-    $prep->bindValue(1, $id);
-    $prep->execute();
+    public function find($id)
+    {
+        $pdo = $this->get_pdo();
 
-    $song = $prep->fetch(PDO::FETCH_ASSOC);
-    $pdo = null;
+        $prep = $pdo->prepare('SELECT * FROM songs WHERE id = ?');
+        $prep->bindValue(1, $id);
+        $prep->execute();
 
-    return $song;
+        $song = $prep->fetch(PDO::FETCH_ASSOC);
+        $pdo = null;
+
+        return $song;
+    }
 }
