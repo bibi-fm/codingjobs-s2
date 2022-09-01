@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new candy</title>
+</head>
+
+<body>
+    <h2>Insert new Candy</h2>
+
+    <div id="results"></div>
+
+    <form method="post">
+        <input type="text" name="name" placeholder="Candy's name"><br>
+        <input type="text" name="price" placeholder="Price (€)"><br>
+
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+        </select><br>
+
+        <input type="submit" value="Insert">
+    </form>
+
+    <script>
+        fetch('get_categories.php', {
+            method: 'post',
+        }).then(res => res.text())
+            .then(function (result) {
+                // Once the AJAX call was made
+                document.getElementById('category').innerHTML = result;
+            });
+
+
+
+        document.querySelector("form").addEventListener('submit', function (event) {
+            // Prevent the page to refresh
+            event.preventDefault();
+            let form = this;
+
+            fetch('add_candy.php', {
+                method: 'post',
+                body: new FormData(form)
+            }).then(res => res.text())
+                .then(function (result) {
+                    // Once the AJAX call was made
+                    console.log(result);
+                    document.getElementById('results').innerHTML = result;
+                });
+        });
+    </script>
+</body>
+
+</html>
