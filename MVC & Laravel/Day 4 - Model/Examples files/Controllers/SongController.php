@@ -39,9 +39,15 @@ class SongController extends Controller
             'release_date' => 'required'
         ]);
 
-        $result = DB::insert('INSERT INTO songs(title, release_date, poster, artist_id, categ_id) VALUES(?, ?, ?, 1, 1)', [$request->title, $request->release_date, $request->poster]);
+        $song = Song::create([
+            'title' => $request->title,
+            'release_date' => $request->release_date,
+            'poster' => $request->poster,
+            'artist_id' => 1,
+            'categ_id' => 1,
+        ]);
 
-        if ($result)
+        if ($song)
             return 'Inserted successfully';
         else
             return 'Problem inserting. Try again later.';
