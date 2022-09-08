@@ -6,6 +6,7 @@ class Flower
     private $name;
     private $price;
 
+
     // Setters
     public function set_id($newId)
     {
