@@ -10,7 +10,7 @@ Step 1 :
 
 Step 2 : 
 	
-	Once you submit the form, it should save the email in the session.
+	Once you submit the form, it should make basic validations and save the email in the session if ok.
 	You don't have to check if the email exists in the DB or anything like this.
 	Just save it to the session.
 
