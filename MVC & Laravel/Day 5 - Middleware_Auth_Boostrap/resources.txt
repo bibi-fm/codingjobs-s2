@@ -1,0 +1,2 @@
+https://laravel.com/docs/9.x/middleware
+https://laravel.com/docs/9.x/authentication
