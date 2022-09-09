@@ -1,0 +1,19 @@
+https://laravel.com/docs/9.x/authentication
+
+- Steps : 
+
+1. Download breeze package, run this command-line : 
+	composer require laravel/breeze --dev
+
+2. Install breeze package with this command line : 
+	php artisan breeze:install
+
+3. Run the migrations : 
+	php artisan migrate 
+
+4. run the server ! It should be ok : php artisan serve
+
+
+5. (Only in case of problems!). If you have a problem with the views not displaying properly run those commands : 
+	npm install
+	npm run dev
